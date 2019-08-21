@@ -55,7 +55,7 @@ app.get('/*', (req, res) => {
   // res.end('Not Available Dude');
 });
 
-var port = '3456';
+var port = process.env.PORT ||'3456';
 app.listen(port, () => {
   console.log('Server started on port : ' + port);
 });
