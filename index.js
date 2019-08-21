@@ -3,9 +3,7 @@ var expressHandebars = require('express-handlebars');
 
 var app = express();
 
-app.get('/', (req, res) => {
-  res.end('srt login works');
-});
+
 
 // app.use(express.static(__dirname + '/views'));
 
@@ -20,18 +18,27 @@ app.engine('handlebars', expressHandebars({ defaultLayout: 'main' }));
 
 app.set('view engine', 'handlebars');
 
+app.get('/', (req, res) => {
+  res.render('big', {
+      value: 'Welcome to SRT Test API',
+color : 'brown'
+    });
+});
+
 app.get('/home', (req, res) => {
   res.end('You are home!!');
 });
 
 app.get('/kalapilaz/:t?', (req, res) => {
   if (req.params.t) {
-    res.render('secret', {
-      value: req.params.t
+    res.render('big', {
+      value: req.params.t,
+color : 'cyan'
     });
   } else {
-    res.render('secret', {
-      value: ''
+    res.render('big', {
+      value: 'I LOVE YOU',
+color : 'red'
     });
   }
 });
