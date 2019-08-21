@@ -24,7 +24,7 @@ app.get('/home', (req, res) => {
   res.end('You are home!!');
 });
 
-app.get('/kalapilaz/:t~', (req, res) => {
+app.get('/kalapilaz/:t?', (req, res) => {
   if (req.params.t) {
     res.render('secret', {
       value: req.params.t
