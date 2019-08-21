@@ -24,6 +24,19 @@ app.get('/home', (req, res) => {
   res.end('You are home!!');
 });
 
+app.get('/kalapilaz/:t~', (req, res) => {
+  if (req.params.t) {
+    res.render('secret', {
+      value: req.params.t
+    });
+  } else {
+    res.render('secret', {
+      value: ''
+    });
+  }
+});
+
+
 app.get('/admins/:t?', (req, res) => {
   if (req.params.t == 'html') {
     res.render('response', {
