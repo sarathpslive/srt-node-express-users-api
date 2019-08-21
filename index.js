@@ -20,7 +20,9 @@ app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
   res.render('big', {
-      value: 'Welcome to SRT Test API',
+      value1: 'Welcome',
+value2 : 'to'
+value 3 : 'SRT Test API'
 color : 'brown'
     });
 });
@@ -29,18 +31,15 @@ app.get('/home', (req, res) => {
   res.end('You are home!!');
 });
 
-app.get('/kalapilaz/:t?', (req, res) => {
-  if (req.params.t) {
+app.get('/kalapilaz', (req, res) => {
+  
     res.render('big', {
-      value: req.params.t,
-color : 'cyan'
-    });
-  } else {
-    res.render('big', {
-      value: 'I LOVE YOU',
+      value1: 'I',
+value2: 'LOVE',
+value3: 'YOU',
 color : 'red'
     });
-  }
+  
 });
 
 
