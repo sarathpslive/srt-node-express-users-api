@@ -21,8 +21,8 @@ app.set('view engine', 'handlebars');
 app.get('/', (req, res) => {
   res.render('big', {
       value1: 'Welcome',
-value2 : 'to'
-value3 : 'SRT Test API'
+value2 : 'to',
+value3 : 'SRT Test API',
 color : 'brown'
     });
 });
