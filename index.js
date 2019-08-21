@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   res.render('big', {
       value1: 'Welcome',
 value2 : 'to'
-value 3 : 'SRT Test API'
+value3 : 'SRT Test API'
 color : 'brown'
     });
 });
