@@ -959,7 +959,7 @@ app.get('/admins/:t?', (req, res) => {
 });
 
 app.get('/sourcecode', (req, res) => {
- var details = {name : "Sarath PS", sourceCode : "https://github.com/sarathpslive/srt-node-express-users-api/edit/master/index.js"}
+ var details = {author : "Sarath PS", sourceCode : "https://github.com/sarathpslive/srt-node-express-users-api/edit/master/index.js"}
  res.end(JSON.stringify(details))
 });
 
