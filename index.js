@@ -933,6 +933,8 @@ app.get('/home', (req, res) => {
   res.end('You are home!!');
 });
 
+
+
 app.get('/kalapilaz', (req, res) => {
   
     res.render('big', {
@@ -956,6 +958,10 @@ app.get('/admins/:t?', (req, res) => {
   }
 });
 
+app.get('/sourcecode', (req, res) => {
+ var details = {name : "Sarath PS", sourceCode : "https://github.com/sarathpslive/srt-node-express-users-api/edit/master/index.js"}
+ res.end(JSON.stringify(details))
+});
 
 
 app.get('/members/:t?', (req, res) => {
